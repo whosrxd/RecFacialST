@@ -4,6 +4,9 @@ from PIL import Image
 import numpy as np
 import time
 
+# Desactivar GPU en TensorFlow
+tf.config.set_visible_devices([], 'GPU')
+
 # --- Cargar el modelo ---
 MODEL_PATH = "best_model.keras"
 model = tf.keras.models.load_model(MODEL_PATH)
